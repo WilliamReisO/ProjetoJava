@@ -1,7 +1,6 @@
 package listaCompras;
 
 import java.text.NumberFormat;
-import java.util.List;
 
 public class produto {
 
@@ -73,17 +72,19 @@ public class produto {
 	}
 
 	public String toString() {
-		return "Atributos do Produto:" + "\n- Categoria: " + categoria + "\n- Quantidade: " + quantidade + "\n- Marca: "
-				+ marca + "\n- Nome:  " + nome + "\n- Preço: " + formatarMoeda() + "\n- Código:  " + codigo;
+		return "\n- Nome:  " + nome + "\n- Categoria: " + categoria + "\n- Quantidade: " + quantidade + "\n- Marca: "
+				+ marca +  "\n- Preço: " + formatarMoeda() + "\n- Código:  " + codigo;
 	}
 
 	//----------------------------------
+	
 	public String formatarMoeda() {
-
 		NumberFormat nf = NumberFormat.getCurrencyInstance();
 		nf.setMinimumFractionDigits(2);
 		String formatoMoeda = nf.format(preco);
 		return formatoMoeda;
 	}
 
+	
+	
 }
